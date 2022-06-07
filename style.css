@@ -1,0 +1,108 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+* {
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+    'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR',
+    'Malgun Gothic', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  background: inherit;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  overflow: visible;
+  cursor: pointer;
+}
+
+body {
+  background: radial-gradient(
+    96.74% 276.79% at 3.59% 5.28%,
+    #f0f4ff 0%,
+    #a5b6ee 100%
+  );
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+.weniv-logo {
+  width: 244px;
+  height: 48px;
+  margin: 72px 0 60px 0;
+}
+
+.container {
+  width: 400px;
+  background: linear-gradient(144.07deg, #5572bb 2.13%, #374b7c 102.97%);
+  box-shadow: 20px 20px 60px 10px rgba(55, 75, 124, 0.4);
+  border-radius: 16px;
+  margin-bottom: 60px;
+  padding: 48px 44px 40px 44px;
+}
+
+.title {
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  font-size: 24px;
+  font-weight: 700;
+  padding-bottom: 23px;
+  border-bottom: 1px solid rgba(61, 83, 138, 1);
+  margin-bottom: 40px;
+}
+
+.timer-flexbox {
+  display: flex;
+  margin-bottom: 46px;
+  justify-content: space-between;
+}
+
+.box-item {
+  display: block;
+  background: linear-gradient(314.28deg, #304577 0%, #4c65a0 83%);
+  border: 1px solid #354971;
+  border-radius: 4px;
+  padding: 16px 14px 16px 13px;
+  font-size: 40px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 1);
+  min-width: 83px;
+  text-align: center;
+}
+
+.btn-flexbox {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn {
+  height: 48px;
+  width: 112px;
+  border-radius: 50px;
+  background: #324577;
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 50px;
+  color: rgba(97, 113, 153, 1);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.btn img {
+  vertical-align: top;
+  margin-right: 5px;
+}
+
+.weniv-copy {
+  text-align: center;
+}

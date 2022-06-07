@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Timer</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h3>
+        <img
+          class="weniv-logo"
+          src="./images/weniv-logo.svg"
+          alt="위니브 로고 사진"
+        />
+      </h3>
+
+      <!-- 타이머 박스 시작 -->
+      <article class="container">
+        <h1 class="title">TIMER</h1>
+        <section class="timer-flexbox">
+          <section class="flexbox">
+            <span id="hours" class="box-item">00</span>
+          </section>
+          <section class="flexbox">
+            <span id="min" class="box-item">00</span>
+          </section>
+          <section class="flexbox">
+            <span id="sec" class="box-item">00</span>
+          </section>
+        </section>
+        <div class="btn-flexbox">
+          <button class="btn btn-start">
+            <img
+              src="./images/icon-start-disabled.svg"
+              alt="시작버튼"
+              id="img-start"
+            />START
+          </button>
+          <button class="btn btn-reset">
+            <img
+              src="./images/icon-reset-disabled.svg"
+              alt="리셋버튼"
+              id="img-reset"
+            />RESET
+          </button>
+        </div>
+      </article>
+      <!-- 타이버 박스 끝 -->
+
+      <p class="weniv-copy">
+        <img src="./images/ⓒ WENIV Corp..svg" alt="위니브 코퍼레이션" />
+      </p>
+    </div>
+    <script>
+      let seconds = 0;
+      let minutes = 0;
+      let hours = 0;
+      let boxSecond = document.querySelector('#sec');
+      let boxMinutes = document.querySelector('#min');
+      let boxHours = document.querySelector('#hours');
+      let btnStart = document.querySelector('.btn-start');
+      let btnReset = document.querySelector('.btn-reset');
+      let imgStart = document.querySelector('#img-start');
+      let imgReset = document.querySelector('#img-reset');
+      let count = 0;
+
+      boxSecond.addEventListener('click', function () {
+        imgStart.src = './images/start-default.svg';
+        imgReset.src = './images/reset-default.svg';
+        count++;
+        if (count == 1) {
+          boxSecond.textContent = 10;
+        } else if (count == 2) {
+          boxSecond.textContent = 20;
+        } else if (count == 3) {
+          boxSecond.textContent = 30;
+        } else if (count == 4) {
+          boxSecond.textContent = 40;
+        } else if (count == 5) {
+          boxSecond.textContent = 50;
+        } else if (count == 6) {
+          boxSecond.textContent = 60;
+        }
+      });
+
+      btnStart.addEventListener('click', function () {
+        setInterval(function () {
+          let count = boxSecond.textContent;
+          count--;
+          if (count >= 60) {
+            boxSecond.textContent = count;
+          }
+          if (count == 0) {
+            boxSecond.textContent = '00';
+          }
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>
